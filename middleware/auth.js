@@ -1,6 +1,7 @@
 import pkg from 'jsonwebtoken'
 const { jwt } = pkg
 const { decode } = pkg
+const { verify } = pkg
 
 const auth = async (req, res, next) => {
   try {
@@ -10,7 +11,7 @@ const auth = async (req, res, next) => {
     let decodedData
 
     if (token && isCustomAuth) {
-      decodedData = jwt.verify(token, 'test')
+      decodedData = verify(token, 'test')
 
       req.userId = decodedData?.id
     } else {
