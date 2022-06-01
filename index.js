@@ -18,10 +18,6 @@ app.use(cors())
 app.use('/movies', moviesRoutes)
 app.use('/user', userRoutes)
 
-app.get('/', (req, res) => {
-  res.send('Welcome to Bookmyshow API')
-})
-
 // const CONNECTION_URL =
 //   'mongodb+srv://bookmyshow:bookmyshow123@cluster0.tgh9n.mongodb.net/?retryWrites=true&w=majority'
 const PORT = process.env.PORT || 5000
