@@ -1,5 +1,6 @@
-import { jwt } from 'jsonwebtoken'
-import { decode } from 'jsonwebtoken'
+import pkg from 'jsonwebtoken'
+const { jwt } = pkg
+const { decode } = pkg
 
 const auth = async (req, res, next) => {
   try {
