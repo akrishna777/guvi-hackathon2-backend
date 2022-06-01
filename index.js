@@ -4,7 +4,7 @@ import mongoose from 'mongoose'
 import cors from 'cors'
 
 import moviesRoutes from './Routes/Movies.js'
-import userRoutes from './routes/users.js'
+import userRoutes from './Routes/users.js'
 
 import dotenv from 'dotenv'
 
@@ -17,6 +17,10 @@ app.use(cors())
 
 app.use('/movies', moviesRoutes)
 app.use('/user', userRoutes)
+
+app.get('/', (req, res) => {
+  res.send('Welcome to Bookmyshow API')
+})
 
 // const CONNECTION_URL =
 //   'mongodb+srv://bookmyshow:bookmyshow123@cluster0.tgh9n.mongodb.net/?retryWrites=true&w=majority'
