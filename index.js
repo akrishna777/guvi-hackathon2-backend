@@ -3,7 +3,7 @@ import bodyParser from 'body-parser'
 import mongoose from 'mongoose'
 import cors from 'cors'
 
-import moviesRoutes from './routes/Movies.js'
+import moviesRoutes from './Routes/Movies.js'
 import userRoutes from './routes/users.js'
 
 import dotenv from 'dotenv'
@@ -19,7 +19,7 @@ app.use('/movies', moviesRoutes)
 app.use('/user', userRoutes)
 
 app.get('/', (req, res) => {
-  res.send('Hello to Bookmyshow API')
+  res.send('Welcome to Bookmyshow API')
 })
 
 // const CONNECTION_URL =
